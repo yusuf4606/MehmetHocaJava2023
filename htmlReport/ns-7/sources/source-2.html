@@ -1,0 +1,164 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > StringManipulations01</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">day06swapvaluesstringmanipulations</a>
+</div>
+
+<h1>Coverage Summary for Class: StringManipulations01 (day06swapvaluesstringmanipulations)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">StringManipulations01</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/27)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package day06swapvaluesstringmanipulations;
+&nbsp;
+<b class="nc">&nbsp;public class StringManipulations01 {</b>
+&nbsp;    public static void main(String[] args) {
+&nbsp;        //String bir non-primitive data type dir ve ayni zamanda bir classdir
+<b class="nc">&nbsp;        String s = &quot;Java is easy&quot;;</b>
+&nbsp;
+&nbsp;        //Ornek1: &quot;s&quot; Stringindeki tum characterleri buyuk harf yapiniz
+<b class="nc">&nbsp;        String sUpper = s.toUpperCase();</b>
+<b class="nc">&nbsp;        System.out.println(sUpper);//JAVA İS EASY</b>
+&nbsp;
+&nbsp;        //Ornek2:&quot;s&quot; Stringindeki tum characterleri kucuk harf yapiniz
+<b class="nc">&nbsp;        String sLower = s.toLowerCase();</b>
+<b class="nc">&nbsp;        System.out.println(sLower);//java is easy</b>
+&nbsp;
+&nbsp;        //Ornek3: &quot;s&quot; String&#39;indeki ilk characteri aliniz.
+<b class="nc">&nbsp;        char firstChar = s.charAt(0);</b>
+<b class="nc">&nbsp;        System.out.println(firstChar);//J</b>
+&nbsp;
+&nbsp;        //Ornek4: &quot;s&quot; string&#39;indeki bastan ikinci ve sondan ikinci characteri aliniz ve ekrana yazdiriniz
+<b class="nc">&nbsp;        char secondChar = s.charAt(1);</b>
+<b class="nc">&nbsp;        char secondLastChar = s.charAt(10);</b>
+<b class="nc">&nbsp;        System.out.println(&quot;&quot; + secondChar + secondLastChar);//as</b>
+&nbsp;
+&nbsp;        //Ornek 5: &quot;s&quot; string&#39;inde kullanilan character sayisini bulunuz
+<b class="nc">&nbsp;        int sLength = s.length();</b>
+<b class="nc">&nbsp;        System.out.println(sLength);//12</b>
+&nbsp;
+&nbsp;        //Ornek 6: &quot;s&quot; String&#39;indeki ilk 4 characteri aliniz
+&nbsp;        // s.substring(0,4) ==&gt; bu kullanimda ilk index dahildir, ikinci index harictir.
+<b class="nc">&nbsp;        String sub1 = s.substring(0, 4);</b>
+<b class="nc">&nbsp;        System.out.println(sub1);//Java</b>
+&nbsp;
+&nbsp;        //Ornek7: &quot;s&quot; String&#39;indeki &quot;is&quot; kelimesini aliniz
+<b class="nc">&nbsp;        String sub2 = s.substring(5, 7);</b>
+<b class="nc">&nbsp;        System.out.println(sub2);//is</b>
+&nbsp;
+&nbsp;        //Ornek8: &quot;s&quot; String&#39;indeki &quot;easy&quot; kelimesini aliniz
+<b class="nc">&nbsp;        String sub3 = s.substring(8, 12);</b>
+<b class="nc">&nbsp;        System.out.println(sub3);//easy</b>
+&nbsp;
+&nbsp;        //ikinci yol
+<b class="nc">&nbsp;        String sub4 = s.substring(8);</b>
+<b class="nc">&nbsp;        System.out.println(sub4);//easy</b>
+&nbsp;
+&nbsp;        //Ornek 9:  &quot;s&quot; String&#39;inde &quot;money&quot; kelimesinin var olup olmadigini kontrol ediniz
+<b class="nc">&nbsp;        boolean isExist = s.contains(&quot;money&quot;);</b>
+<b class="nc">&nbsp;        System.out.println(isExist);</b>
+&nbsp;
+&nbsp;        //Ornek 10:  &quot;s&quot; String&#39;inin belli bir harf yada harflerle baslayip baslamadigini kontrol ediniz
+<b class="nc">&nbsp;        boolean isStart=s.startsWith(&quot;Java&quot;);</b>
+<b class="nc">&nbsp;        System.out.println(isStart);</b>
+&nbsp;
+&nbsp;        //Ornek 11: &quot;s&quot; String inin 5. index dahil olmak uzere bu indexten itibaren &quot;i&quot; karakteri ile baslayip baslamadigini
+&nbsp;        //kontrol eden kodu yaziniz
+<b class="nc">&nbsp;        boolean isBegin=s.startsWith(&quot;i&quot;,5);</b>
+<b class="nc">&nbsp;        System.out.println(isBegin);//true</b>
+&nbsp;
+&nbsp;
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-05-29 23:32</div>
+</div>
+</body>
+</html>

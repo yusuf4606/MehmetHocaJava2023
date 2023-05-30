@@ -1,0 +1,157 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Arrays01</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">day16arraysforeachloop</a>
+</div>
+
+<h1>Coverage Summary for Class: Arrays01 (day16arraysforeachloop)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Arrays01</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/15)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package day16arraysforeachloop;
+&nbsp;
+&nbsp;import java.util.Arrays;
+&nbsp;
+<b class="nc">&nbsp;public class Arrays01 {</b>
+&nbsp;    public static void main(String[] args) {
+&nbsp;
+<b class="nc">&nbsp;        int a =13;</b>
+&nbsp;        //Bu yapinin icinde sadece bir tane data depolanabilir.
+&nbsp;        //Ama biz code yazarken bir yapinin icinde coklu data depolama ihtiyaci hissederiz
+&nbsp;        //Bir yapinin icinde coklu data depolayabilme icin java Array yapisini olusturmustur
+&nbsp;
+&nbsp;
+&nbsp;        //Array nasil olusturulur?
+<b class="nc">&nbsp;        String stdNames [] = new String [5];</b>
+&nbsp;
+&nbsp;        //Arrayler console a nasil yazdirilir?
+&nbsp;        //toString() methodu nu kullanmadan sadece array ismi ile yazdirirsaniz java o Array in adresini yazdirir
+<b class="nc">&nbsp;        System.out.println(Arrays.toString( stdNames));</b>
+&nbsp;
+&nbsp;
+&nbsp;        /*
+&nbsp;        Arrayler diger collectionlardan cok cok daha hizlidir (superfast).
+&nbsp;        Arrayler diger collectionlardan daha az memory kullanirlar
+&nbsp;         */
+&nbsp;
+&nbsp;        //Array e eleman ekleme nasil yapilir?
+<b class="nc">&nbsp;        stdNames[2]=&quot;Benna&quot;;</b>
+<b class="nc">&nbsp;        stdNames[3]=&quot;Abdullah&quot;;</b>
+<b class="nc">&nbsp;        stdNames[4]=&quot;Recep&quot;;</b>
+<b class="nc">&nbsp;        stdNames[0]=&quot;Ekim&quot;;</b>
+<b class="nc">&nbsp;        stdNames[1]=&quot;Ailana&quot;;</b>
+&nbsp;
+<b class="nc">&nbsp;        System.out.println(Arrays.toString( stdNames));//[Ekim, Ailana, Benna, Abdullah, Recep]</b>
+&nbsp;
+&nbsp;        //Array&#39;den specific bir elemani nasil aliriz?
+<b class="nc">&nbsp;        System.out.println(stdNames[3]);//Abdullah</b>
+<b class="nc">&nbsp;        System.out.println(stdNames[4]);//Recep</b>
+<b class="nc">&nbsp;        System.out.println(stdNames[0]);//Ekim</b>
+&nbsp;
+&nbsp;        //Ornek 1: Arraydeki her elemanin sonuna &quot;!&quot; isareti koyarak ekrana yazdiriniz.
+&nbsp;        // length() string lerde method (parantezli), arraylerde ise parantezsiz yazilir(method degil)
+&nbsp;        //  0       1       2       3       4
+&nbsp;        //[Ekim, Ailana, Benna, Abdullah, Recep]
+&nbsp;
+&nbsp;
+<b class="nc">&nbsp;        for (int i = 0; i &lt;stdNames.length ;            i++) {</b>
+<b class="nc">&nbsp;            System.out.println(stdNames[i]+&quot;*&quot;);</b>
+&nbsp;
+&nbsp;        }
+&nbsp;
+&nbsp;
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-05-29 23:32</div>
+</div>
+</body>
+</html>

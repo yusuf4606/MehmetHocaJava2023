@@ -1,0 +1,143 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > DoWhileLoop03</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">day15loops</a>
+</div>
+
+<h1>Coverage Summary for Class: DoWhileLoop03 (day15loops)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">DoWhileLoop03</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/15)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package day15loops;
+&nbsp;
+&nbsp;import java.util.Scanner;
+&nbsp;
+<b class="nc">&nbsp;public class DoWhileLoop03 {</b>
+&nbsp;    public static void main(String[] args) {
+&nbsp;
+&nbsp;         /*
+&nbsp;        Gecerli Username=&quot;admin&quot; ve Password=&quot;pwd123&quot; dur.
+&nbsp;        Kullanicidan username ve password&#39;u alin.
+&nbsp;        Username ve password dogru ise console&#39;a &quot;Hesabiniza hosgeldiniz!&quot; yazdirin.
+&nbsp;        Username veya password yanlis ise 4 kere &quot;Username ve password&#39;unuzu giriniz&quot; mesaji versin
+&nbsp;        Username veya password 4. kere yanlis girilirse &quot;Hesabiniz bloke olmustur&quot; mesaji vererek islemi tamamlayiniz */
+&nbsp;
+<b class="nc">&nbsp;        Scanner input = new Scanner(System.in);</b>
+<b class="nc">&nbsp;        int counter = 0;</b>
+&nbsp;
+&nbsp;        do {
+&nbsp;
+<b class="nc">&nbsp;            if (counter == 4) {</b>
+<b class="nc">&nbsp;                System.out.println(&quot;Hesabiniz bloke olmustur!!&quot;);</b>
+<b class="nc">&nbsp;                break;</b>
+&nbsp;            }
+&nbsp;
+<b class="nc">&nbsp;            System.out.println(&quot;Username i giriniz&quot;);</b>
+<b class="nc">&nbsp;            String userName = input.next();</b>
+&nbsp;
+<b class="nc">&nbsp;            System.out.println(&quot;Password u giriniz&quot;);</b>
+<b class="nc">&nbsp;            String password = input.next();</b>
+&nbsp;
+<b class="nc">&nbsp;            if (userName.equals(&quot;admin&quot;) &amp;&amp; password.equals(&quot;pwd123&quot;)) {</b>
+<b class="nc">&nbsp;                System.out.println(&quot;Hesabiniza hosgeldiniz&quot;);</b>
+<b class="nc">&nbsp;                break;</b>
+&nbsp;            }
+<b class="nc">&nbsp;            counter++;</b>
+<b class="nc">&nbsp;        } while (true);</b>
+&nbsp;
+&nbsp;
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-05-29 23:32</div>
+</div>
+</body>
+</html>

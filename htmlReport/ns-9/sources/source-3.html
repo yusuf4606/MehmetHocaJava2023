@@ -1,0 +1,189 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > StringManipulation02</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">day08stringmanipulationmemoryusageifstatement</a>
+</div>
+
+<h1>Coverage Summary for Class: StringManipulation02 (day08stringmanipulationmemoryusageifstatement)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">StringManipulation02</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/22)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package day08stringmanipulationmemoryusageifstatement;
+&nbsp;
+<b class="nc">&nbsp;public class StringManipulation02 {</b>
+&nbsp;    public static void main(String[] args) {
+&nbsp;        //Ornek 1:  Bir string in belirli bir karakterinden baslayarak belirli bir karaktere kadar dynamic olarak aliniz
+&nbsp;        //      abc@gmail.com   ===&gt; gmail
+&nbsp;
+<b class="nc">&nbsp;        String a = &quot;abcdefghei@hotmail.com&quot;;</b>
+&nbsp;
+<b class="nc">&nbsp;        int startingIndex = a.indexOf(&#39;@&#39;) + 1;</b>
+<b class="nc">&nbsp;        int endingIndex = a.indexOf(&#39;.&#39;);</b>
+<b class="nc">&nbsp;        String companyName = a.substring(startingIndex, endingIndex);</b>
+<b class="nc">&nbsp;        System.out.println(&quot;companyName = &quot; + companyName);//companyName = gmail</b>
+&nbsp;
+<b class="nc">&nbsp;        System.out.println(&quot;hard coding ==&gt;&quot; + a.substring(4, 9));</b>
+&nbsp;
+&nbsp;        //Ornek 2:Verilen iki string in birbirinin aynisi olup olmadigini kontrol eden kodu yaziniz
+<b class="nc">&nbsp;        String h = &quot;ali Can&quot;;</b>
+<b class="nc">&nbsp;        String i = &quot;Ali Can&quot;;</b>
+<b class="nc">&nbsp;        boolean result = h.equals(i);</b>
+<b class="nc">&nbsp;        System.out.println(result);//false</b>
+&nbsp;        //___________________________________________________________________________________________________________________________
+&nbsp;        //Java da Memory kullanimi
+&nbsp;        /*
+&nbsp;        java da iki tane memory vardir
+&nbsp;        1)Stack Memory ==&gt; small
+&nbsp;            a)Kucuk memorydir
+&nbsp;            b)Primitive leri ve Non-Primitivelerin adreslerini (reference) tutar
+&nbsp;
+&nbsp;        2) Heap Memory ==&gt; Huge
+&nbsp;            a)Buyuk memory dir
+&nbsp;            b)Non-Primitive datalari icerir
+&nbsp;            ==&gt;Java heap memory de yerlestirilen tum Non-primitive datalar icin bir adres olusturur
+&nbsp;            ve bu adresi stack memory de saklar
+&nbsp;         */
+&nbsp;
+&nbsp;        /*
+&nbsp;        Note: String lerin esitliklerini kontrol ederken &quot;==&quot; yerine &quot;equals()&quot; methodu kullaniriz
+&nbsp;        Neden kullaniriz?
+&nbsp;        Cunku; &quot;==&quot; sembolu iki string i karsilastirirken hem adreslerine hemde degerlerine bakar,
+&nbsp;        ikiside ayni ise stringler esittir de. ama biz code yazarken genellikle Stringlerin adressleri ile degil
+&nbsp;        degerleri ile ilgileniriz. Bu yuzden String karsilastirmalarinda &quot;==&quot; kullanmayiz
+&nbsp;
+&nbsp;        &quot;equals()&quot; methodu ise iki string i karsilastirirken sadece degerlerine bakar. degerleri ayni ise bu iki string
+&nbsp;        esittir der, degerler farkli ise bu iki string farklidir der ki bu bizim kod yazarken ihtiyac duyudugumuz seydir
+&nbsp;         */
+&nbsp;
+<b class="nc">&nbsp;        String s = &quot;Tom&quot;;</b>
+<b class="nc">&nbsp;        String t = &quot;Terry&quot;;</b>
+<b class="nc">&nbsp;        String r = new String(&quot;Tom&quot;);</b>
+&nbsp;
+<b class="nc">&nbsp;        System.out.println(s == t);//false cunku adresler ve degerler farklidir</b>
+<b class="nc">&nbsp;        System.out.println(s.equals(t));//false cunku degerler farkli</b>
+<b class="nc">&nbsp;        System.out.println(s == r);//false cunku adresler farkli</b>
+<b class="nc">&nbsp;        System.out.println(s.equals(r));//true cunku equals() sadece degerlere bakar.&quot;s&quot; ve &quot;r&quot; nin degerleri ayni oldugunda true verir</b>
+&nbsp;//___________________________________________________________________________________________________________________________
+&nbsp;        //Ornek 3: Verilen iki string in birbirinin aynisi olup olmadigini buyuk harf kucuk harf dikkate almadan
+&nbsp;        // kontrol eden kodu yaziniz
+&nbsp;        //equalsIgnoreCase()iki string in birbirinin aynisi olup olmadigini buyuk harf kucuk harf dikkate almadan kontrol eder
+&nbsp;
+<b class="nc">&nbsp;        String j = &quot;ali Can&quot;;</b>
+<b class="nc">&nbsp;        String k = &quot;Ali Can&quot;;</b>
+<b class="nc">&nbsp;        boolean result3 = j.equalsIgnoreCase(k);</b>
+<b class="nc">&nbsp;        System.out.println(result3);//true</b>
+&nbsp;
+&nbsp;    /*Homework
+&nbsp;    1) Bir string variable olusturunuz ve bu string deki rakam olmayan tum karakterlerin sayisini console a yazdiriniz
+&nbsp;    2) Bir string variable olusturunuz ve ilk karakter ile son karakter disindaki tum karakterleri console a buyuk harflerle yazdiriniz
+&nbsp;    3) Bir string variable olusturunuz ve bu string deki ilk ve son karakterlerin ASCII degerleri toplamini console a yazdiriniz
+&nbsp;    4) Tek kelimeli bir sehir ismi icin string variable olusturun ve sehir isiminin ilk harfini buyuk harfle diger harflerini kucuk harflerle
+&nbsp;    console a yazdirin
+&nbsp;    5)Asagidaki kurallara gore kullanicinin girdigi password u kontrol ediniz
+&nbsp;        a)En az 6 character olsun
+&nbsp;        b)En az bir tane buyuk harf olsun
+&nbsp;        c)En az bir tane kucuk harf olsun
+&nbsp;        d)En az bir tane rakam olsun
+&nbsp;
+&nbsp;    Note 1: Once canli oturum sirasinda cozulen ornekleri yapiniz
+&nbsp;    Note 2: Tum sorulari dinamik kodlarla cozulmelidir
+&nbsp;    Note 3: Birbirinizin cozumlerini inceleyerek tavsiyede bulunabilir yada yardim isteyebilirsiniz
+&nbsp;
+&nbsp;     */
+&nbsp;
+&nbsp;
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-05-29 23:32</div>
+</div>
+</body>
+</html>

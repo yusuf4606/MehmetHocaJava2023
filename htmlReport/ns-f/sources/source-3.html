@@ -1,0 +1,162 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Loops03</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">day14loops</a>
+</div>
+
+<h1>Coverage Summary for Class: Loops03 (day14loops)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Loops03</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/13)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package day14loops;
+&nbsp;
+&nbsp;import java.util.Scanner;
+&nbsp;
+<b class="nc">&nbsp;public class Loops03 {</b>
+&nbsp;    public static void main(String[] args) {
+&nbsp;      /*
+&nbsp;        Example 1: Kullanicidan baslangic ve bitis degerlerini alin.
+&nbsp;        Baslangic degerinden baslayip bitis degerine kadar aradaki tum cift tamsayilari ekrana yazdiriniz
+&nbsp;         9 - 14 ==&gt; 10  12  14     */
+<b class="nc">&nbsp;        Scanner input = new Scanner(System.in);</b>
+<b class="nc">&nbsp;        System.out.println(&quot;Baslangic degerini giriniz..&quot;);</b>
+<b class="nc">&nbsp;        int start = input.nextInt();</b>
+&nbsp;
+<b class="nc">&nbsp;        System.out.println(&quot;Bitis degerini giriniz..&quot;);</b>
+<b class="nc">&nbsp;        int end = input.nextInt();</b>
+&nbsp;
+<b class="nc">&nbsp;        if (start &gt; end) {</b>
+<b class="nc">&nbsp;            System.out.println(&quot;Baslangic degeri bitis degerinden buyuk olmamali ..&quot;);</b>
+&nbsp;        } else {
+<b class="nc">&nbsp;            for (int i = start; i &lt;= end; i++) {</b>
+<b class="nc">&nbsp;                if (i % 2 == 0) {</b>
+<b class="nc">&nbsp;                    System.out.print(i + &quot; &quot;);</b>
+&nbsp;                }
+&nbsp;            }
+&nbsp;        }
+&nbsp;
+&nbsp;
+&nbsp;        //Ornek 2: Hic sayi kullanmadan 1 den 100 e kadar olan sayilari console a yazdiriniz
+&nbsp;
+<b class="nc">&nbsp;        for (int i = &#39;d&#39; / &#39;d&#39;; i &lt;= &#39;d&#39;; i++) {</b>
+<b class="nc">&nbsp;            System.out.print(i + &quot; &quot;);</b>
+&nbsp;        }
+&nbsp;//        int d = &#39;d&#39;;
+&nbsp;//        System.out.println(d);//100
+&nbsp;
+&nbsp;        /*
+&nbsp;       Note 1) Bazi looplar sonsuz defa calisabilir, bu tarz looplara inifinite (sonsuz) loop denir
+&nbsp;       sonsuz loop genellikle &quot;increment/decrement&quot; kisminda yapilan hatadan kaynaklanir
+&nbsp;
+&nbsp;        for (int i =1; i &lt; 10; i--) {
+&nbsp;
+&nbsp;        }
+&nbsp;
+&nbsp;        Note 2) Loop olusturdugumuzda ikinci kismi yazmazsaniz sonsuz loop olusur
+&nbsp;                for (int i = 0;  ; i++) {
+&nbsp;
+&nbsp;        }
+&nbsp;
+&nbsp;        Note 3) Bazi looplar hic calismayabilir
+&nbsp;
+&nbsp;               for (int i = 1; i &lt;0 ; i--) {
+&nbsp;
+&nbsp;        }
+&nbsp;         */
+&nbsp;
+&nbsp;    }
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-05-29 23:32</div>
+</div>
+</body>
+</html>

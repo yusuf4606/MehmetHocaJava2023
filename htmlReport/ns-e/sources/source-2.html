@@ -1,0 +1,158 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Loops02</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">day13loops</a>
+</div>
+
+<h1>Coverage Summary for Class: Loops02 (day13loops)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Loops02</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/22)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package day13loops;
+&nbsp;
+<b class="nc">&nbsp;public class Loops02 {</b>
+&nbsp;    public static void main(String[] args) {
+&nbsp;        // Ornek 1: 21 den 180 e kadar hem 2 hemde 3 ile tam bolunebilen tamsayilari ekrana yazdiran kodu yaziniz
+<b class="nc">&nbsp;        for( int i=21   ; i&lt;181  ; i++  ){</b>
+<b class="nc">&nbsp;            if(i%2==0  &amp;&amp; i%3==0){</b>
+<b class="nc">&nbsp;                System.out.print(i+&quot; &quot;);</b>
+&nbsp;            }
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        System.out.println();</b>
+&nbsp;        //Ornek 2: Size verilen  kucuk harfle yazilmis Stringini index i cift sayi olan characterlerini buyuk harfe donusturunuz
+&nbsp;        //          ankara  ==&gt; AKR
+<b class="nc">&nbsp;        String s = &quot;ankara&quot;;</b>
+&nbsp;
+<b class="nc">&nbsp;        for(int i=0; i&lt; s.length() ;                     i++  ){</b>
+<b class="nc">&nbsp;           String ch = s.substring(i,i+1);</b>
+<b class="nc">&nbsp;           if(i%2==0){</b>
+<b class="nc">&nbsp;               System.out.println(ch.toUpperCase());</b>
+&nbsp;           }
+&nbsp;        }
+&nbsp;
+&nbsp;
+&nbsp;        //Ornek 3: Verilen bir String de ilk a harfinden onceki tum characterleri console a yazdiriniz
+&nbsp;        // &quot;I love Java&quot;  ==&gt;  &quot;I love J&quot;
+<b class="nc">&nbsp;        String s1 = &quot;Tramway&quot;;</b>
+&nbsp;
+<b class="nc">&nbsp;        for(int i=0;i&lt;s1.length() ;                  i++ ){</b>
+&nbsp;
+<b class="nc">&nbsp;            char ch =s1.charAt(i);</b>
+<b class="nc">&nbsp;            if(ch==&#39;a&#39;){</b>
+<b class="nc">&nbsp;                break;</b>
+&nbsp;            }
+<b class="nc">&nbsp;            System.out.print(ch);</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        System.out.println();</b>
+&nbsp;        //Ornek 4: Verilen  bir string de son &#39;a&#39; dan sonraki tum characterleri ters sirada yazdiriniz..
+&nbsp;        //      &quot;Germany&quot; ==&gt; yn
+&nbsp;
+<b class="nc">&nbsp;        String t = &quot;Germany&quot;;</b>
+&nbsp;
+<b class="nc">&nbsp;        for( int i =t.length()-1; i&gt;=0  ;      i-- ){</b>
+&nbsp;
+<b class="nc">&nbsp;            if(t.charAt(i)==&#39;a&#39;){</b>
+<b class="nc">&nbsp;                break;</b>
+&nbsp;            }
+<b class="nc">&nbsp;            System.out.print(t.charAt(i));</b>
+&nbsp;        }
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-05-29 23:32</div>
+</div>
+</body>
+</html>

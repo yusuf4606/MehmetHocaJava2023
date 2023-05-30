@@ -1,0 +1,162 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Arrays03</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">day16arraysforeachloop</a>
+</div>
+
+<h1>Coverage Summary for Class: Arrays03 (day16arraysforeachloop)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Arrays03</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/30)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package day16arraysforeachloop;
+&nbsp;
+&nbsp;import java.util.Arrays;
+&nbsp;
+<b class="nc">&nbsp;public class Arrays03 {</b>
+&nbsp;    public static void main(String[] args) {
+&nbsp;
+&nbsp;        //Ornek 1: Integer bir array olusturunuz, icine 6 tane eleman yerlestiriniz.
+&nbsp;        // Bu elemanlarin en kucugu ile en buyugunun toplamini ekrana yazdiriniz
+&nbsp;
+<b class="nc">&nbsp;        int ages[] = new int[6];</b>
+<b class="nc">&nbsp;        ages[0] = 20;</b>
+<b class="nc">&nbsp;        ages[1] = 23;</b>
+<b class="nc">&nbsp;        ages[2] = 19;</b>
+<b class="nc">&nbsp;        ages[3] = 44;</b>
+<b class="nc">&nbsp;        ages[4] = 15;</b>
+<b class="nc">&nbsp;        ages[5] = 32;</b>
+&nbsp;
+<b class="nc">&nbsp;        System.out.println(Arrays.toString(ages));//[20, 23, 19, 44, 15, 32]</b>
+&nbsp;
+&nbsp;        //1. yol
+&nbsp;        //sort() methodu array deki elemanlari kucukten buyuge dizer
+<b class="nc">&nbsp;        Arrays.sort(ages);</b>
+<b class="nc">&nbsp;        System.out.println(Arrays.toString(ages));//[15, 19, 20, 23, 32, 44]</b>
+<b class="nc">&nbsp;        System.out.println(ages[0] + ages[ages.length - 1]);//59</b>
+&nbsp;
+&nbsp;        //2. yol
+&nbsp;
+<b class="nc">&nbsp;        int minimum = ages[0];</b>
+<b class="nc">&nbsp;        int maximum = ages[0];</b>
+&nbsp;
+&nbsp;                     //[20, 23, 19, 44, 15, 32]
+<b class="nc">&nbsp;        for (int w : ages) {</b>
+&nbsp;
+<b class="nc">&nbsp;            minimum = Math.min(minimum, w);</b>
+<b class="nc">&nbsp;            maximum = Math.max(maximum, w);</b>
+&nbsp;        }
+<b class="nc">&nbsp;        System.out.println(maximum+minimum);//59</b>
+&nbsp;
+&nbsp;        //Ornek 2: String bir array olusturunuz 6 eleman ekleyiniz, yellow dan onceki elemanlari yaziriniz
+<b class="nc">&nbsp;        String colors [] = new String [6];</b>
+<b class="nc">&nbsp;        colors[0]=&quot;Red&quot;;</b>
+<b class="nc">&nbsp;        colors[1]=&quot;Orange&quot;;</b>
+<b class="nc">&nbsp;        colors[2]=&quot;Blue&quot;;</b>
+<b class="nc">&nbsp;        colors[3]=&quot;Yellow&quot;;</b>
+<b class="nc">&nbsp;        colors[4]=&quot;Green&quot;;</b>
+<b class="nc">&nbsp;        colors[5]=&quot;Brown&quot;;</b>
+<b class="nc">&nbsp;        System.out.println(Arrays.toString(colors));//[Red, Orange, Blue, Yellow, Green, Brown]</b>
+&nbsp;
+<b class="nc">&nbsp;        for (String  w:   colors  ) {</b>
+<b class="nc">&nbsp;            if(w.equals(&quot;Yellow&quot;)){</b>
+<b class="nc">&nbsp;                break;</b>
+&nbsp;            }
+<b class="nc">&nbsp;            System.out.println(w);</b>
+&nbsp;        }
+&nbsp;
+&nbsp;
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-05-29 23:32</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Ternary01</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">day11nestedifternaryincrementdecrement</a>
+</div>
+
+<h1>Coverage Summary for Class: Ternary01 (day11nestedifternaryincrementdecrement)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Ternary01</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/24)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package day11nestedifternaryincrementdecrement;
+&nbsp;
+&nbsp;import java.security.spec.RSAOtherPrimeInfo;
+&nbsp;import java.util.Scanner;
+&nbsp;
+<b class="nc">&nbsp;public class Ternary01 {</b>
+&nbsp;
+&nbsp;    public static void main(String[] args) {
+&nbsp;        //Ternary Statement
+&nbsp;        //Ornek 1: Sayi 10 dan kucuk ise console a &quot;kucuk&quot; yazdirin, degil ise &quot;Kucuk degil&quot; yazdirin
+&nbsp;        //----------if else cozumu--------
+<b class="nc">&nbsp;        int num = 12;</b>
+&nbsp;
+<b class="nc">&nbsp;        if (num &lt; 10) {</b>
+<b class="nc">&nbsp;            System.out.println(&quot;Kucuk&quot;);</b>
+&nbsp;        } else {
+<b class="nc">&nbsp;            System.out.println(&quot;Kucuk degil&quot;);</b>
+&nbsp;        }
+&nbsp;
+&nbsp;        //-------Ternary Cozumu------
+&nbsp;        //  Conditon    ?   Condition true ise calisir  :   Condition falsi ise calisir ;
+<b class="nc">&nbsp;        String sonuc = num &lt; 10 ? &quot;Kucuk&quot; : &quot;Kucuk degil&quot;;</b>
+<b class="nc">&nbsp;        System.out.println(sonuc);</b>
+&nbsp;
+&nbsp;        //Ornek 2: Sayi cift ise console a &quot;cift&quot;, tek ise &quot;Tek&quot; yazdirin
+&nbsp;        //----------if else cozumu--------
+<b class="nc">&nbsp;        int k = 13;</b>
+&nbsp;
+<b class="nc">&nbsp;        if (k % 2 == 0) {</b>
+<b class="nc">&nbsp;            System.out.println(&quot;cift&quot;);</b>
+&nbsp;        } else {
+<b class="nc">&nbsp;            System.out.println(&quot;tek&quot;);</b>
+&nbsp;        }
+&nbsp;
+&nbsp;        //----------Ternary cozumu--------
+<b class="nc">&nbsp;        String result = k % 2 == 0 ? &quot;cift&quot; : &quot;tek&quot;;</b>
+<b class="nc">&nbsp;        System.out.println(result);</b>
+&nbsp;
+&nbsp;        //Ornek 3: Sayi 0 dan buyukse pozitif degilse ekrana pozitif degil yazdirin
+<b class="nc">&nbsp;        int a = -5;</b>
+<b class="nc">&nbsp;        System.out.println(a &gt; 0 ? &quot;pozitiftir&quot; : &quot;pozitif degil&quot;);</b>
+&nbsp;
+&nbsp;        //Ornek 4: Kullanicidan iki sayi aliniz &quot;buyuk olmayan&quot; (kucuk veya esit olan) sayiyi yazdiriniz
+<b class="nc">&nbsp;        Scanner input = new Scanner(System.in);</b>
+<b class="nc">&nbsp;        System.out.println(&quot;iki sayi giriniz..&quot;);</b>
+&nbsp;
+<b class="nc">&nbsp;        double first = input.nextDouble();</b>
+<b class="nc">&nbsp;        double second = input.nextDouble();</b>
+&nbsp;
+&nbsp;        //1. yol if else cozumu
+<b class="nc">&nbsp;        if (first &lt; second) {</b>
+<b class="nc">&nbsp;            System.out.println(first);</b>
+&nbsp;        } else {
+<b class="nc">&nbsp;            System.out.println(second);</b>
+&nbsp;        }
+&nbsp;
+&nbsp;        //2. yol Ternary
+<b class="nc">&nbsp;        double result2 = first &lt; second ? first : second;</b>
+<b class="nc">&nbsp;        System.out.println(result2);</b>
+&nbsp;
+&nbsp;
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-05-29 23:32</div>
+</div>
+</body>
+</html>

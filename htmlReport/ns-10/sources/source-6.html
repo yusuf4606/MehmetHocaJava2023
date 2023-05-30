@@ -1,0 +1,170 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > WhileLoop02</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">day15loops</a>
+</div>
+
+<h1>Coverage Summary for Class: WhileLoop02 (day15loops)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">WhileLoop02</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/26)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package day15loops;
+&nbsp;
+&nbsp;import java.util.Scanner;
+&nbsp;
+<b class="nc">&nbsp;public class WhileLoop02 {</b>
+&nbsp;    public static void main(String[] args) {
+&nbsp;        //Example 1: Kullanicinin verdigi sayi icin carpim tablosunu olusturup console&#39;a yazdiran kodu yaziniz
+&nbsp;        /*            3 ==&gt; 3x1=3
+&nbsp;                            3x2=6
+&nbsp;                            3x3=9
+&nbsp;                            3x4=12 ...
+&nbsp;                            3x10=30*/
+&nbsp;
+<b class="nc">&nbsp;        Scanner input = new Scanner(System.in);</b>
+<b class="nc">&nbsp;        System.out.println(&quot;Carpim tablosunu gormek icin bir sayi giriniz..&quot;);</b>
+<b class="nc">&nbsp;        int num = input.nextInt();</b>
+&nbsp;
+<b class="nc">&nbsp;        int i = 1;</b>
+<b class="nc">&nbsp;        while (i &lt; 11) {</b>
+<b class="nc">&nbsp;            System.out.println(num + &quot; x &quot; + i + &quot; = &quot; + (num * i));</b>
+<b class="nc">&nbsp;            i++;</b>
+&nbsp;        }
+&nbsp;
+&nbsp;        //Example 2: Verilen bir string de her harfin sonrasina &quot;*&quot; sembolunu ekleyiniz
+&nbsp;        //       Java ==&gt; J*a*v*a*
+<b class="nc">&nbsp;        System.out.println(&quot;Bir kelime giriniz&quot;);</b>
+<b class="nc">&nbsp;        String word = input.next();</b>
+<b class="nc">&nbsp;        String newWord = &quot;&quot;;</b>
+&nbsp;
+<b class="nc">&nbsp;        int k = 0;</b>
+&nbsp;
+<b class="nc">&nbsp;        while (k &lt; word.length()) {</b>
+<b class="nc">&nbsp;            newWord = newWord + word.charAt(k) + &quot;*&quot;;</b>
+<b class="nc">&nbsp;            k++;</b>
+&nbsp;        }
+<b class="nc">&nbsp;        System.out.println(newWord);</b>
+&nbsp;
+&nbsp;
+&nbsp;        //Example 3: Bir String deki tekrarsiz karakterleri console a yazdiriniz
+&nbsp;
+&nbsp;        // kertenkelle ==&gt; rtn
+&nbsp;
+&nbsp;        // indexOf(&quot;k&quot;) ==&gt; 0   farkli ise tekrarli
+&nbsp;        // lastIndexOf(&quot;k&quot;) ==&gt; 6
+&nbsp;
+&nbsp;        // indexOf(&quot;r&quot;) ==&gt; 2   ayni ise tekrarsiz
+&nbsp;        // lastIndexOf(&quot;r&quot;) ==&gt; 2
+&nbsp;
+<b class="nc">&nbsp;        String s = &quot;kertenkelle&quot;;</b>
+<b class="nc">&nbsp;        String sonuc = &quot;&quot;;</b>
+&nbsp;
+<b class="nc">&nbsp;        int a =0;</b>
+&nbsp;
+<b class="nc">&nbsp;        while (a&lt;s.length()){</b>
+&nbsp;
+<b class="nc">&nbsp;            char ch = s.charAt(a);</b>
+&nbsp;
+<b class="nc">&nbsp;            if(s.indexOf(ch)==s.lastIndexOf(ch)){</b>
+<b class="nc">&nbsp;                sonuc=sonuc+ch;</b>
+&nbsp;            }
+<b class="nc">&nbsp;            a++;</b>
+<b class="nc">&nbsp;        }</b>
+<b class="nc">&nbsp;        System.out.println(sonuc);</b>
+&nbsp;
+&nbsp;
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-05-29 23:32</div>
+</div>
+</body>
+</html>

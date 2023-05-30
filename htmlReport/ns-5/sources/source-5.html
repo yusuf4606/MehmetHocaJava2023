@@ -1,0 +1,155 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Scanner05</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">day04scannerwrapper</a>
+</div>
+
+<h1>Coverage Summary for Class: Scanner05 (day04scannerwrapper)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Scanner05</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/14)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package day04scannerwrapper;
+&nbsp;
+&nbsp;import java.util.Scanner;
+&nbsp;
+<b class="nc">&nbsp;public class Scanner05 {</b>
+&nbsp;    public static void main(String[] args) {
+&nbsp;        //Kullanicidan alacaginiz 5 basamakli bir sayinin ilk iki ve son iki basamagindaki
+&nbsp;        // rakamlarin toplamini yazdiran kodu yaziniz.
+&nbsp;
+<b class="nc">&nbsp;        Scanner input = new Scanner(System.in);</b>
+<b class="nc">&nbsp;        System.out.println(&quot;5 basamakli bir sayi giriniz&quot;);</b>
+<b class="nc">&nbsp;        int number = input.nextInt();</b>
+&nbsp;
+&nbsp;        //bir sayinin son rakamini alabilmek icin o sayiyi 10 a bolup kalani almaliyiz
+&nbsp;        // % =&gt; modulus operator solunda bulunan sayinin saginda bulunan sayiya bolumunden kalani verir
+&nbsp;        // dolayisiyla %10 her zaman bize birler basamaginda bulunan sayiyi verir
+&nbsp;        //bir tamsayiyi bir tamsayiya bolerseniz java sonucu kesinlikle tamsayi yapar
+&nbsp;        //java  bu durumda yuvarlama yapmaz, ondalik kismi iptal eder
+&nbsp;        //dolayisiyle bir tamsayiyi 10 a bolersek birler basamagini silmis oluruz
+&nbsp;
+&nbsp;        //son rakami al
+<b class="nc">&nbsp;        int birlerBasamagi = number%10;</b>
+&nbsp;        //sayi kucult
+<b class="nc">&nbsp;        number = number/10;</b>
+&nbsp;        //sondan ikinci rakami al
+<b class="nc">&nbsp;        int sondanIkinci = number%10;</b>
+&nbsp;        //sayi kucult
+<b class="nc">&nbsp;        number = number/10;</b>
+&nbsp;        //sondan ucuncu rakami al
+<b class="nc">&nbsp;        int sondanUcuncu = number%10;</b>
+&nbsp;        //sayi kucult
+<b class="nc">&nbsp;        number=number/10;</b>
+&nbsp;        //sondan dorduncu rakami al
+<b class="nc">&nbsp;        int sondanDorduncu = number%10;</b>
+&nbsp;        //sayi kucult
+<b class="nc">&nbsp;        number=number/10;</b>
+&nbsp;        //sondan besinci rakami al
+<b class="nc">&nbsp;        int sondanBesinci = number%10;</b>
+&nbsp;        //son rakam oldugu icin kucultmeye gerek yok
+&nbsp;
+<b class="nc">&nbsp;        System.out.println(sondanBesinci+sondanDorduncu+birlerBasamagi+sondanIkinci);</b>
+&nbsp;
+&nbsp;/*
+&nbsp;    Homework
+&nbsp;    1) Kullanicidan aldiginiz 3 tane sayinin ortalamasini bulan kodu yaziniz
+&nbsp;     ornegin =&gt; 3,5,7 icin ortalama (3+5+7)/3=5
+&nbsp;    2) Kullanicidan aldiginiz 3 basamakli bir sayinin rakamlari toplamini bulunuz
+&nbsp;     ornegin =&gt; 312 icin 3+1+2=6
+&nbsp;
+&nbsp; */
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-05-29 23:32</div>
+</div>
+</body>
+</html>
