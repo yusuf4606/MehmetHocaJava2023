@@ -7,12 +7,13 @@ import java.util.List;
 public class ArrayLists02 {
     public static void main(String[] args) {
 
-        //Bir listin baska bir list ile ayni olup olmadigini nasil kontrol ederiz?
-        //iki listin esit olabilmesi icin ayni index te ayni elemanlar olmalidir
+        //Bir List in baska bir list ile ayni olup olmadigini nasil kontrol ederiz?
+        //Iki listin esit olabilmesi icin ayni index te ayni elemanlar olmalidir
         ArrayList<String> names1 = new ArrayList<>();
         names1.add("Tom");
         names1.add("Jim");
         names1.add("Kim");
+
 
         ArrayList<String> names2 = new ArrayList<>();
         names2.add("Tom");
@@ -22,13 +23,11 @@ public class ArrayLists02 {
         boolean s = names1.equals(names2);
         System.out.println(s);//false
 
-        //Ornek: Verilen iki integer listte tamamiyla ayni elemanlarin olup olmadigini kontrol eden kodu yaziniz
-
+        //Ornek: Size verilen iki Integer list te tamamiyla ayni elemanlarin olup olmadigni kontrol eden kodu yaziniz
         ArrayList<Integer> nums1 = new ArrayList<>();
         nums1.add(8);
         nums1.add(10);
         nums1.add(9);
-
 
         ArrayList<Integer> nums2 = new ArrayList<>();
         nums2.add(8);
@@ -37,11 +36,11 @@ public class ArrayLists02 {
 
         Collections.sort(nums1);
         Collections.sort(nums2);
-        boolean result = nums1.equals(nums2);
-        System.out.println(result);//true
 
+       boolean t= nums1.equals(nums2);
+        System.out.println(t);
 
-        //ArrayListte bir elemanin ilk gorunumu nasil silinir?
+        //ArrayList te bir elemanin ilk gorunumu nasil silinir?
         ArrayList<String> cities = new ArrayList<>();
         cities.add("Miami");
         cities.add("Istanbul");
@@ -57,24 +56,20 @@ public class ArrayLists02 {
         System.out.println(cities.remove("Miami"));//true
         System.out.println(cities);
 
-        //Arraylistte bir eleman index kullanilarak nasil silinir?
+        //ArrayList te bir eleman index i kullanilarak nasil silinir?
         System.out.println(cities.remove(2));
         System.out.println(cities);
 
-        //remove() methodu eleman ile kullanilirsa ilk gorunumu siler
-        // ve o elemani silip silmedigini ifade eden true yada false return eder
-
-        //remove() methodu index ile kullanilirsa bu indexte silmis oldugu datayi return eder
+        //remove() methodu index ile kullanilirsa size silmis oldugu datayi return eder
+        //remove() methodu eleman ile kullanilirsa size o elemani silip silmedigini ifade eden boolean return eder
 
 
 
+        //ArrayList olustururken sag tarafa(Constructor) Arraylist yazmak zorundasiniz
+        //Ama sol tarafa ister Arraylist yazin isterseniz List yazin ikiside calisir
+        //Detaylari Collections konusunda gorecegiz
 
-
-        //ArrayList olustururken sag tarafa(constructor) Arraylist yazmak zorundasiniz
-        //Ama sol tarafa iste ArrayList yazin isterseniz de List yazin ikiside calisir
-        //Detaylari collections konusunda gorecegiz
-
-        //Ornek : Bir integer list olusturun ve 12 elemanini siliniz
+        //Ornek: Bir integer List olusturun ve 12 elemanini  Listden siliniz
 
         List<Integer> ages = new ArrayList<>();
         ages.add(23);
@@ -83,37 +78,31 @@ public class ArrayLists02 {
         ages.add(4);
 
 
-
-
-        //1. yol
-//        Integer nonPrimitive=12;
+        //1 . yol
+//        Integer nonPrimitive =12;
 //        ages.remove(nonPrimitive);
 //        System.out.println(ages);
 
-        //2. yol Recommended
-        ages.remove((Integer)12);
+        //2. yol
+        ages.remove((Integer) 12);
         System.out.println(ages);
 
-//        //3. yol
+        //3. yol
 //        ages.remove(Integer.valueOf(12));
 //        System.out.println(ages);
 
-        // 4. yol
-//        System.out.println(ages);
+        //4. yol
 //        ages.remove(ages.indexOf(12));
 //        System.out.println(ages);
 
-        //Bir ArrayListteki bir elemanin tum gorunumlerini nasil sileriz?
-        //bir listteki bir elemanin tum gorunumlerini removeAll() ile silebiliriz
-        // ama removeAll() methodu list ile kullanilir
-
-        List<String >citiesToRemove = new ArrayList<>();
-        citiesToRemove.add("Istanbul");
+        //Bir ArrayList teki bir elemanin tum gorunumlerini nasil sileriz?
+        List<String> citiesToRemove = new ArrayList<>();
         citiesToRemove.add("Yozgat");
+        citiesToRemove.add("Istanbul");
+
 
         cities.removeAll(citiesToRemove);
         System.out.println(cities);
-
 
     }
 }

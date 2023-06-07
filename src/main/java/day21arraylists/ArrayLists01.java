@@ -6,39 +6,40 @@ public class ArrayLists01 {
     public static void main(String[] args) {
 
         /*
-        1) Ayni data type indaki coklu datalari depolamak icin Array kullaniriz
-        2) Arraylerin negatif bir yonu var, icine koyacağınız eleman sayisini en basta belirlemek zorundasiniz
-        3) Arrayler eleman sayisinda esnek degildirler, bu yuzden java Arraylist adli yeni bir yapi olusturdu
-        Bu yapi eleman sayisinda esnekdir. Hic eleman koymazsaniz eleman sayisini sifir olarak ayarlar,
-        1000 eleman koyarsaniz eleman sayisni 1000 olarak ayarlar
-        4) Arraylist yerine sadece List de diyebilirsiniz
-        5) Java Arraylistleri olusturduktan sonra Array leri iptal etmedi cunku;
-            a)Array ler super hizlidir.
-            b)Array ler memory de cok az yer kaplar.
+        1)Ayni data type indaki coklu data lari depolamak icin Array kullaniriz
+        2)Arraylerin bir negatif yonu var; icine koyacagıniz eleman sayisini en basta belirlemek zorundasiniz
+        3)Arrayler eleman sayisinda esnek degildirler. Bu yuzden Java "Arraylist" adli yeni bir yapi olusturdu
+        Bu yapi eleman sayisinda esnekdir. Hic eleman koymazsaniz eleman sayisini sifir olarak ayarlar.
+         1000 tane eleman koyarsaniz eleman sayisini 1000 olarak ayarlar
+        4)Arraylist yerine sadece List de diyebiliriz
+        5) Java Arraylistleri olusturduktan sonra Arrayleri iptal etmedi cunku;
+            a)Array ler super hizlidir
+            b)Array ler memory de cok az yer kaplarlar
             c)Bu nedenle eleman sayisi belli olan datalari depolamak icin Arrayler tercih edilir
-        6) Arrayler pirimitive data type lari ve "reference" lari depolayabilir.
-           Ama ArrayList ler non-primitive data type lari depolar, bu nedenle Arraylistler Arraylerden daha fazla yer kaplarlar
+        6) Arrayler pirimitive data type lari ve non-pirimitive lerin reference larini depolayabilir.
+        ama Arraylistler "non-primitive" data type larini depolar. bu yuzden Arraylistler Arraylerden daha cok yer kaplar
          */
 
         //ArrayList nasil olusturulur?
-        ArrayList<Integer> ages = new ArrayList<Integer>();
+        ArrayList<Integer> ages = new ArrayList<>();
 
-        //Arraylist console a nasil yazdirilir?
+        //ArrayList console a nasil yazdirilir?
         System.out.println(ages);
 
-        //Arraylist lere eleman nasil eklenir?
-        //Arraylist lere eleman eklemek icin add()methodunu kullaniriz
-        //add() methodu elemanlari sizin verdiginiz sirada "list"e ekler (insertion order)
+        //Arraylistlere eleman nasil eklenir?
+        //Arraylistlere eleman eklemek icin add() methodunu kullaniriz
+        //add() methodu elemanlari sizin verdiginiz sirada list e ekler.(Insertion Order)
         ages.add(9);
         ages.add(12);
         ages.add(10);
         ages.add(1, 656);
         ages.add(3, 777);
         ages.add(888);
-        System.out.println(ages);//[9, 656, 12, 777, 10, 888]
+        System.out.println(ages);
 
-        //List'e coklu eleman nasil eklenir? veya Liste baska bir list nasil eklenir?
-        //Bir list e coklu eleman eklemek icin o elemanlari oncelikle bir listin icine koymalisiniz
+        //List e coklu eleman nasil eklenir? veya List e baska bir list nasil eklenir?
+        //Bir list' e coklu eleman eklemek icin o elemanlari once bir list'in icine koymalisiniz.
+
         ArrayList<Integer> newAges = new ArrayList<>();
         newAges.add(8);
         newAges.add(9);
@@ -49,45 +50,44 @@ public class ArrayLists01 {
         System.out.println(ages);//[9, 656, 12, 777, 10, 888, 8, 9, 10]
 
         ages.addAll(2, newAges);
-        System.out.println(ages);
+        System.out.println(ages);//[9, 656, 8, 9, 10, 12, 777, 10, 888, 8, 9, 10]
 
-        //ArrayList te eleman sayisi nasil bulunur?
-        //size() methodu bir list teki eleman sayisini verir
+        //ArrayList'te eleman sayisi nasil bulunur?
+        //size() method u bir listteki eleman sayisini verir
         int numOfElement = ages.size();
         System.out.println(numOfElement);//12
 
-        //ArrayList te specific bir eleman nasil alinir?
+        //ArrayListte specific bir eleman nasil alinir?
         //get() methodu index kullanarak istedigimiz elemani almaya yarar
         int el1 = ages.get(1);
         System.out.println(el1);//656
 
-        //Arraylist te specific bir elemani nasil degisitirebilir?
-        ages.set(6,111);
-        ages.set(4,313);
+        //ArrayList te specific bir eleman nasil degisitirilir?
+        ages.set(6, 111);
+        ages.set(4, 313);
         System.out.println(ages);
 
-        //Bir listte tum elemanlari nasil silebiliriz?
+        //Bir List teki tum elemanlari nasil silebilirim?
 //        ages.clear();
-//        System.out.println(ages);
+//        System.out.println(ages);//[]
 
-        //Arraylistte specific bir elemanin var olup olmadigni nasil anlariz?
-        boolean r =ages.contains(313);
-        System.out.println(r);
+        //ArrayListte specific bir elemanin var olup olmadigini nasil anlariz?
+        boolean r = ages.contains(656);
+        System.out.println(r);//true
 
-        //Bir Arraylist'in bos olup olmadigini nasil kontrol ederiz?
+        //Bir ArrayList'in bos olup olmadigini nasil kontrol edebiliriz.
         //isEmpty() methodu Arraylist bos ise true bos degilse false return eder.
-        boolean r2= ages.isEmpty();
+        boolean r2 = ages.isEmpty();
         System.out.println(r2);
 
-        //Ornek 1: Size verilen bir listin bos olup olmadigini kontrol eden kodu yaziniz.
+        //Ornek: Size verilen bir list in bos olup olmadigini kontrol eden kodu yaziniz
         ArrayList<String> names = new ArrayList<>();
-        names.add("Gulce");
-        names.add("Seda");
-        names.add("Benna");
-        names.add("Rıdvan");
-        names.add("Enes");
+        names.add("Saadet");
+        names.add("Kasim");
+        names.add("Ekim");
+        names.add("Ali");
 
-        //1 . way
+        //1. way
         if(names.size()==0){
             System.out.println("List is empty");
         }else{
@@ -96,20 +96,18 @@ public class ArrayLists01 {
 
         names.clear();
 
-        //2. yol Recommended
-
+        //2. Way Recommended
         if(names.isEmpty()){
             System.out.println("List is empty");
-        }else {
+        }else{
             System.out.println("List has at least 1 element");
         }
 
-
         /*
-        Bir method u ogrenirken asagidaki 3 seyi ogrenin
-        1) o method ne is yapar?
-        2) o method nasil kullanilir?
-        3) o method size neyi verir?
+            Bir method ogrenirken 3 seyi ogrenin;
+            1) O method ne is yapar?
+            2) O method nasil kullanilir?
+            3) O method size neyi verir?
          */
 
     }
