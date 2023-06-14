@@ -17,7 +17,7 @@ public class Sb01 {
         String t = s + "!";
         String w = t + "?";
 
-        //String i degistirdikten sonra ayni string assign ederseniz, java yine yeni bir container olusturur.
+        //String i degistirdikten sonra ayni string e assign ederseniz, java yine yeni bir container olusturur.
         //degismis degeri bu yeni container in icine koyar ve eski container i gosteren pointer yeni container a yonlendirir
         //Dolayisiyla eski container adressiz kalir, ve "Garbage Collector" adressiz olan container'lari siler
 

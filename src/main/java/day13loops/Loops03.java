@@ -23,5 +23,6 @@ public class Loops03 {
         // "continue" ise loop yaparken bazi elemanlari isleme sokmamak icin kullanilir
         // continue keywordu bir looptaki gecerli iteration i sonlandirip sizi artirma/azaltma bolumune goturur.
 
+
     }
 }
