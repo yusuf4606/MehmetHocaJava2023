@@ -1,51 +1,67 @@
 package day25inheritance;
 
-public class Animal {
-    //Inheritance ==> miras alma
+public class Animal  {
+    //Inheritance ==> Miras alma
     /*
-    Ozellikleri bir classtan diger classlara alan bir kavramdir
-    Mesela siz bir class olusturmak istiyorsunuz ama daha once olusturulmus bir class
-     sizin istediginiz ozelliklerin cogunu kapsiyor. O zaman yeni olusturdugunuz classi ozelliklerini kullanmak
-     istediginiz class'a child yaparsiniz
+    Ozellikleri bir classtan diger classlara alan bir kavramdir, Bunun javadaki karsiligi sudur:
+    Siz bir class olusturacaksiniz ama daha once olusturulmus bir class sizin istediginiz ozelliklerin
+     bir cogunu kapsiyor, o zaman direkt yeni olusturdugunuz classi ozelliklerini kullanmak istediginiz
+     classa  child yapariz
 
-     Inheritance'in faydalari
+     Inhertiance in faydalari
      1) Code tekrarlarindan kurtuluruz
-     2) Code tamiri(maintenance)  kolay olur
+     2) Code tamiri (maintenance) kolay olur
      3) Child classlari daha atomic yapmis oluruz
 
-     => Bir classi baska bir classin child classi yapmak icin
-     extends keywordu kullanilir. Ilk yazilan child, ikinci yazilan class
-     parent olur, parent class'a super class da denir
+     =>Bir class i baska bir classin child classi yapmak icin "extends" keyword kullanilir.
+     Ilk yazilan class child, ikinci yazilan class parent (veya super) olur,
 
-     => child class objectleri parent class tan method ve variable lari kullanabilirler
-     => Parent class objectleri child classtan method ve variablelari kullanamazlar
+     =>Child class objectleri Parent Class dan method ve variablellari kullanabilirler
+     =>Parent class objectleri child classtan method ve variablellari kullanamazlar
 
-     => javada bir classin sadece 1 tane parenti olabilir, coklu parent'a "Multiple Inheritance" derler,
-     tekli parent'a "single inheritance" derler. Java "Multiple Inheritance" i desteklemez, Java single inheritance kullanir
+     =>Javada bir classin sadece 1 tane parenti i olabilir Coklu parent a "Multiple Inheritance" derler
+     tekli parent a "Single Inheritance" derler, java Multiple Inheritance i desteklemez
+     java "Single Inheritance " kullanir
 
-     => Apartman seklindeki inheritance yapisina "MultiLevel Inheritance" denir, java multilevel inheritanece i destekler
+     =>Apartman seklindeki inheritance yapisina "Multilevel inheritance " denir
+     Java "Multilevel inheritance " i destekler
 
-     => Object class her classin parentidir. java da object class haric her classin parenti vardir.
-        Java da parent i olmayan tek class object classdir
+     => Object Class her classin parentidir. Java da Object Class haric her classin parenti vardir
+        Javada parent i olmayan tek class Object classtir
 
-     => java da parent'dan child'a olan iliskilere "HAS-A Relation Ship" denir
-        child'dan parent'a olan iliskilere "IS-A Relation Ship" denir
+     => Javada parenttan childa olan iliskilere "HAS-A Relationship " denir
+        child dan parent a olan iliskilere "IS-A Relationship " denir
 
-     ==> javada her classin bir tane default constructoru vardir. Bu default constructor classin icinde gorunmez
-         cunku default constructor "Object Class" icindedir.
-
-
-
+    => Javada her classin bir tane default constructor i vardir. Bu default constructor classin icinde gorunmez cunku
+        constructor "Object Class" icindedir.
 
      */
 
-    public void eat() {
-        System.out.println("Animals eat...");
+
+    public void eat(){
+        System.out.println("Animals eat... ");
     }
 
-    public void drink() {
-        System.out.println("Animals drink...");
+    public void drink(){
+        System.out.println("Animals drink... ");
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
