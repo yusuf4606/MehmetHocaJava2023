@@ -2,6 +2,7 @@ package day25inheritance;
 
 public class Vehicle {
     public Vehicle(){
+
         System.out.println("Vehicle 1");
     }
     public Vehicle (int price){
@@ -21,9 +22,9 @@ public class Vehicle {
     gibi davranir. Ama kodunuzu daha okunur kilmak icin yazabilirsiniz
     6) super() ve this() ifadeleri constructor icinde herzaman ilk satirda olmalidir
     7) Bir constructor icinde super() ve this() ifadeleri sadece bir kere kullanilabilir. (Bakiniz 6.)
-    8) Inheritance da variablllari ve methodlari cagirmak icin this veya super kullanilir
-       this ayni class icindeki variable veya methodlari cagirmak icin kullanilir
-       super parent class icindeki variable veya methodlari cagirmak icin kullanilir
+    8) Inheritance da variable lari ve methodlari bir classtan cagirmak icin this veya super kullanilir
+    this ayni class icindeki variable lari veya methodlari cagirmak icin kullanilir
+    super parent class icindeki variable lari veya methodlari cagirmak icin kullanilir
 
      */
 }
