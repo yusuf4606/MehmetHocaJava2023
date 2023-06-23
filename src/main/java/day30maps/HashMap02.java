@@ -5,56 +5,50 @@ import java.util.HashMap;
 public class HashMap02 {
     public static void main(String[] args) {
 
-        HashMap<String, Integer> stdAges = new HashMap<>();
-        stdAges.put("Gulce",30);
-        stdAges.put("Abdullah",39);
-        stdAges.put("Benna",33);
-        stdAges.put("Hasan",30);
-        stdAges.put("Suleyman",33);
+        HashMap<String, Integer > stdAges = new HashMap<>();
+        stdAges.put("Suat",36);
+        stdAges.put("Yusuf",33);
+        stdAges.put("Serkant",26);
+        stdAges.put("Emin",19);
+        stdAges.put("Alparslan",30);
+        stdAges.put("Alparslan",33);
 
-        //key i tekrarli kullandigimizda hata vermez, en son verilen entry nin degerini kabul eder
-        //Bu yontem value guncelleme icin kullanilabilir. Buna overwrite denir
-        stdAges.put("Abdullah",24);
+        //key'i tekrarli kullandigimizda hata vermez, en son verilen entry nin degerini kabul eder
+        //Bu yontem value guncellemede kullanilabilir. Buna "overwrite" denir
+        System.out.println(stdAges);//{Suat=36, Yusuf=33, Alparslan=30, Serkant=26, Emin=19}
 
-        //Map ler entryleri siralarken key lere bakarak siralama yapar
-        //HashMap ler entry leri rastgele siralar bu yuzden cok hizli calisir
-        System.out.println(stdAges);//{Hasan=30, Abdullah=24, Gulce=30, Benna=32, Suleyman=33}
-
-
-        //replace() methodu value lari key ler kullanarak update etmeye yarar
-        stdAges.replace("Hasan",35);
-        System.out.println(stdAges);//{Suleyman=33, Hasan=35, Abdullah=24, Gulce=30, Benna=33}
-
-        //replace("Gulce",30,35); methodu map icinde Gulce varsa ve degeri 30 ise yeni deger 35 olsun yoksa olmasin
-        stdAges.replace("Gulce",30,35);
+        //replace() methodu value lari keyleri kullanarak update etmeye yarar
+        stdAges.replace("Alparslan",19);
         System.out.println(stdAges);
 
-        //putIfAbsent("Ali",18); method map de Ali key olarak yoksa Map e 18 value ile ekle demektir
-        stdAges.putIfAbsent("Ali",18);
+        //replace("Serkant",26,23); methodu mapin icinde Key ve Value kismi eslesirse gunceller
+        stdAges.replace("Serkant",26,23);
         System.out.println(stdAges);
 
-        //get() ve getOrDefault() methodu eger aranan eleman mapte varsa ayni value yu verir
-        System.out.println(stdAges.get("Abdullah"));//24
-        System.out.println(stdAges.getOrDefault("Abdullah", 0));//24
+        //putIfAbsent("Ali",30); methodu Mapde Ali key olarak yoksa Ali key ini 30 valuesu ile ekler varsa eklemez
+        stdAges.putIfAbsent("Ali",30);
+        System.out.println(stdAges);//{Suat=36, Yusuf=33, Alparslan=19, Serkant=23, Emin=19, Ali=30}
 
-       //eger eleman mapte yokas get() method null verir
-        // getOrDefault() methodu sizin belirttiginiz degeri verir
-        System.out.println(stdAges.get("Mehmet"));//null
-        System.out.println(stdAges.getOrDefault("Mehmet", 0));//0
+        System.out.println(stdAges.get("Yusuf"));//33
+        System.out.println(stdAges.getOrDefault("Yusuf", 0));//33
 
+        //eger eleman mapte yoksa get() method null verir
+        //getOrDefault() methodu ise sizin belirttiginiz degeri verir
+        System.out.println(stdAges.get("Fatih"));//null
+        System.out.println(stdAges.getOrDefault("Fatih", 0));//0
 
-        //containsValue(63) methodu mapin icindeki value larin icerisinde "63" olup olmadigini kontrol eder
-        System.out.println(stdAges.containsValue(63));//false
+        //containsValue(313) methodu value larin icinde 313 un olup olmadigini kontrol eder
+        System.out.println(stdAges.containsValue(313));//false
 
-        //containsKey("Seda") methodu mapin icindeki key lerin icerisinde "Seda" olup olmadigini kontrol eder
-        System.out.println(stdAges.containsKey("Seda"));//false
+        //containsKey("Yusuf") methodu key lerin icinde Yusuf un olup olmadigini kontrol eder
+        System.out.println(stdAges.containsKey("Yusuf"));//true
 
-        //remove("Abdullah"); methodu key kullanarak entry i silmeye yarar
-        stdAges.remove("Abdullah");
-        System.out.println(stdAges);//{Suleyman=33, Hasan=35, Gulce=35, Benna=33, Ali=18}
+        //remove("Emin") methodu key kullanarak entry i silemeye yarar
+        stdAges.remove("Emin");
+        System.out.println(stdAges);
 
-        //stdAges.remove("Ali",19); methodu hem key hem value yu kontrol eder eslesirse silme yapar
-        stdAges.remove("Ali",19);
+        //remove("Suat",36); methodu hem key hem value kismini kontrol eder, eslesirse siler
+        stdAges.remove("Suat",36);
         System.out.println(stdAges);
 
     }
