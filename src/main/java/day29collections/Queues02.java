@@ -18,6 +18,8 @@ public class Queues02 {
         System.out.println(line);//[Cheese, Meat, Egg, Milk]
 
 
+
+
         /*
         Queue bir interface dir, bu yuzden constructor i yoktur, dolayisiyla object olustururken new keywordunden
         sonra Queue yazamayiz. Data tyei Queue olan bir object olusturmak icin
@@ -26,15 +28,22 @@ public class Queues02 {
         hakkiniz olur
          */
 
-        //Deque ==> Double ended Queue (=iki uclu queue)
-        //Deque daki add(), get(),peek(),poll().. methodlari first-last seklinde iki uclu sekilde sunulur.
+        //Deque ==> Double ended Queue ( iki uclu queue)
+        //Deque daki add(), get(), peek() vb.. methodlar first-last
+        //seklinde iki uclu olarak bulunur
         Deque<String> d = new LinkedList<>();
         d.add("Egg");
         d.add("Milk");
         d.add("Cheese");
         d.add("Meat");
-
         System.out.println(d);//[Egg, Milk, Cheese, Meat]
+
+
+
+
+
+
+
 
 
 
