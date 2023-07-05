@@ -7,9 +7,11 @@ import java.util.List;
 public class Lambda01 {
     public static void main(String[] args) {
         /*
-        1) Lambda "Functional Programming"dir, digeri "Structured Programming"
-        2) "Functional Programming" te "Ne yapilacak" (What to do) uzerine yogunlasilir
-           "Structured Programming" te "Nasil yapilacak" (How to do) uzerine yogunlasilir
+        1)Lambda "Functional Programming" dir, digeri "Structured Programming"
+        2) Functional Programming de "Ne yapilacak" (what to do) uzerine yogunlasilir
+           "Structured Programming" "Nasil yapilacak" (how to do) uzerine yogunlasilir
+        3) Functional Programming java 8 ile kullanilmaya  baslandi
+        4)  Functional Programming Collectionlar, ve Arraylerde kullanilir
          */
 
         List<Integer> nums = new ArrayList<Integer>();
@@ -23,7 +25,7 @@ public class Lambda01 {
         nums.add(12);
         nums.add(15);
 
-        printElements1(nums);//12 9 131 14 9 10 4 12 15
+        printElements1(nums);
         System.out.println();
         printElements2(nums);
         System.out.println();
@@ -33,39 +35,37 @@ public class Lambda01 {
         System.out.println();
         printSquareOfOddElements(nums);
         System.out.println();
-        printCubeOfDistinctOddElements(nums);
-        System.out.println();
         printSumOfSquaresOfDistinctEvenElements(nums);
         System.out.println();
-        printProductOfSquaresOfDistinctEvenElements(nums);
-        System.out.println();
+        printProductOfSquareOfDistinctEvenElements(nums);
         getMaxValue1(nums);
-        System.out.println();
         getMaxValue2(nums);
         getMaxValue3(nums);
+        getMaxValue4(nums);
+        getMinValue1(nums);
+        getMinValue2(nums);
+        getMinValue3(nums);
+        getMinValue4(nums);
         getMinGreaterThanSevenEven(nums);
-
-
     }
 
-    //1) Bir list'teki elemanlari ayni satirda aralarina bosluk koyarak yazdiran
-    // method'u olusturunuz.(Structured == Yapisal)
+    //1) Bir list'teki elemanlari ayni satirda aralarina bosluk koyarak
+    // yazdiran method'u olusturunuz.(Structured == Yapisal)
     public static void printElements1(List<Integer> nums) {
         for (Integer w : nums) {
             System.out.print(w + " ");
         }
     }
 
-    //2) Bir list'teki elemanlari ayni satirda aralarina bosluk koyarak yazdiran
-    // method'u olusturunuz.(Functional)
+    //2) Bir list'teki elemanlari ayni satirda aralarina bosluk koyarak
+    // yazdiran method'u olusturunuz.(Functional)
     public static void printElements2(List<Integer> nums) {
-
-        //12 9 131 14 9 10 4 12 15
         nums.stream().forEach(t -> System.out.print(t + " "));
     }
 
-    //3) Bir list'teki cift elemanlari ayni satirda aralarina bosluk koyarak
-    // yazdiran method'u olusturunuz.(Structured)
+
+    //3) Bir list'teki cift elemanlari ayni satirda aralarina bosluk
+    // koyarak yazdiran method'u olusturunuz.(Structured)
     public static void printEvenElements1(List<Integer> nums) {
         for (Integer w : nums) {
             if (w % 2 == 0) {
@@ -74,19 +74,17 @@ public class Lambda01 {
         }
     }
 
-    //4) Bir list'teki cift elemanlari ayni satirda aralarina bosluk koyarak
-    // yazdiran method'u olusturunuz.(Functional)
+    //4) Bir list'teki cift elemanlari ayni satirda aralarina bosluk
+    // koyarak yazdiran method'u olusturunuz.(Functional)
     public static void printEvenElements2(List<Integer> nums) {
-
         nums.
                 stream().
                 filter(t -> t % 2 == 0).
                 forEach(t -> System.out.print(t + " "));
     }
 
-    //5) Bir list'teki "tek sayi" olan elemanlarin "kare"lerini ayni satirda  aralarina bosluk
-    // koyarak yazdiran method'u olusturunuz.(Functional)
-
+    //5) Bir list'teki "tek sayi" olan elemanlarin "kare"lerini ayni satirda
+    // aralarina bosluk koyarak yazdiran method'u olusturunuz.(Functional)
     public static void printSquareOfOddElements(List<Integer> nums) {
         nums.
                 stream().
@@ -95,8 +93,8 @@ public class Lambda01 {
                 forEach(t -> System.out.print(t + " "));
     }
 
-    //6) Bir list'teki "tek sayi" olan elemanlarin "kup"lerini "tekrarsiz" olarak ayni satirda aralarina bosluk
-    // koyarak yazdiran method'u olusturunuz.(Functional)
+    //6) Bir list'teki "tek sayi" olan elemanlarin "kup"lerini "tekrarsiz" olarak ayni satirda
+    // aralarina bosluk koyarak yazdiran method'u olusturunuz.(Functional)
     public static void printCubeOfDistinctOddElements(List<Integer> nums) {
         nums.
                 stream().
@@ -106,17 +104,31 @@ public class Lambda01 {
                 forEach(t -> System.out.print(t + " "));
 
     }
-    //7)Bir list'teki "tekrarsiz" "CIFT "
-    // ELEMANLARIN "karelerinin" "toplamını" hesaplayan method oluşturun
+
+    //7)Bir list'teki "tekrarsiz" "CIFT " ELEMANLARIN "karelerinin" "toplamını"
+    // hesaplayan method oluşturun
 
     public static void printSumOfSquaresOfDistinctEvenElements(List<Integer> nums) {
-        Integer sum = nums.stream().distinct().filter(t -> t % 2 == 0).map(t -> t * t).reduce(0, (t, u) -> t + u);
+
+        Integer sum =
+                nums.
+                        stream().
+                        distinct().
+                        filter(t -> t % 2 == 0).
+                        map(t -> t * t).
+                        reduce(0, (t, u) -> t + u);
         System.out.println(sum);
+        /*
+        reduce methodunda t ilk degerini herzaman identity den alir,
+        ilk deger haric tum degerlerini ise her zaman islemden alir
+
+        u degerini her zaman streamden alir
+         */
     }
+
     //8) Bir list'teki "Tekrarsiz" elemanlardan "çift" olanlarin "karesinin"
     // "çarpımını" hesaplayan bir method oluşturun
-
-    public static void printProductOfSquaresOfDistinctEvenElements(List<Integer> nums) {
+    public static void printProductOfSquareOfDistinctEvenElements(List<Integer> nums) {
         Integer product =
                 nums.
                         stream().
@@ -136,7 +148,8 @@ public class Lambda01 {
                         stream().
                         distinct().
                         reduce(Integer.MIN_VALUE, (t, u) -> t > u ? t : u);
-        System.out.println(max);
+        System.out.println(max);//131
+
     }
 
     //2.yol
@@ -146,55 +159,93 @@ public class Lambda01 {
                         stream().
                         distinct().
                         reduce(nums.get(0), (t, u) -> t > u ? t : u);
-        System.out.println(max);
+        System.out.println(max);//131
     }
 
     //3.yol
     public static void getMaxValue3(List<Integer> nums) {
-        int max = nums.stream().distinct().sorted().reduce((t, u) -> u).get();
+        Integer max =
+                nums.
+                        stream().
+                        distinct().
+                        sorted().
+                        reduce((t, u) -> u).get();
+
         System.out.println(max);
     }
 
     //4.yol
     public static void getMaxValue4(List<Integer> nums) {
-        int max = nums.stream().distinct().sorted().reduce(Math::max).get();
+        Integer max =
+                nums.
+                        stream().
+                        distinct().
+                        reduce(Math::max).get();
         System.out.println(max);
     }
 
     //10)Verilen List'teki "minimum değeri" bulmak için bir method oluşturun
-    //1yol
+    //1.yol
     public static void getMinValue1(List<Integer> nums) {
-        Integer min = nums.stream().distinct().reduce((t, u) -> t > u ? u : t).get();
+        Integer min =
+                nums.
+                        stream().
+                        distinct().
+                        reduce((t, u) -> t > u ? u : t).
+                        get();
         System.out.println(min);
     }
-    //2yol
-    public static void getMinValue2(List<Integer> nums) {
-        Integer min = nums.stream().distinct().sorted(Comparator.reverseOrder()).reduce((t,u)->u).get();
-        System.out.println(min);
 
-    }
-    //3yol
-    public static void getMinValue3(List<Integer> nums) {
-        Integer min = nums.stream().distinct().sorted().reduce((t,u)->t).get();
+    //2.yol
+    public static void getMinValue2(List<Integer> nums) {
+        Integer min =
+                nums.
+                        stream().
+                        distinct().
+                        sorted(Comparator.reverseOrder()).
+                        reduce((t, u) -> u).
+                        get();
         System.out.println(min);
     }
+
+    //3.yol
+    public static void getMinValue3(List<Integer> nums) {
+        Integer min =
+                nums.
+                        stream().
+                        distinct().
+                        sorted().
+                        reduce((t, u) -> t).
+                        get();
+        System.out.println(min);
+    }
+
     //4.yol
     public static void getMinValue4(List<Integer> nums) {
-        Integer min = nums.stream().distinct().reduce((t,u)->Math.min(t,u)).get();
+        Integer min =
+                nums.
+                        stream().
+                        distinct().
+                        sorted().
+                        reduce((t, u) -> Math.min(t, u)).
+                        get();
         System.out.println(min);
     }
-    //11)Verilen List'ten 7 den buyuk en kucuk cift sayi yi bulmak için bir method oluşturun
-    // 12 9 131 14 9 10 4 12 15 ==> 10 <-- 7 den buyuk en kucuk cift sayi
-    public static void  getMinGreaterThanSevenEven(List<Integer> nums){
+
+//11)Verilen List'ten 7 den buyuk en kucuk cift sayi yi bulmak için bir method oluşturun
+// 12 9 131 14 9 10 4 12 15 ==> 10 <-- 7 den buyuk en kucuk cift sayi
+    public static void getMinGreaterThanSevenEven(List<Integer> nums){
        Integer min =
                nums.
                        stream().
-                       filter(t->t>7  &&  t%2==0).
+                       filter(t->t>7 && t%2==0 ).
                        sorted().//10,12,12,14
-                       reduce((t,u)->t).get();//10
-        System.out.println(min);
-    }
+                       reduce((t,u)->t).
+                       get();
 
+        System.out.println(min);//10
+
+    }
 
 
 
