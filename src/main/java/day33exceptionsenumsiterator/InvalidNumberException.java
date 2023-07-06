@@ -6,6 +6,4 @@ public class InvalidNumberException extends RuntimeException {
         super(message);
     }
 
-
-
 }

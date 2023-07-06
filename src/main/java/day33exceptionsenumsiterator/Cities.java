@@ -1,6 +1,7 @@
 package day33exceptionsenumsiterator;
 
 public enum Cities {
+
     ADANA(1, "Adana", "01000"),
     ADIYAMAN(2, "Adıyaman", "02000"),
     AFYONKARAHİSAR(3, "Afyonkarahisar", "03000"),
@@ -55,7 +56,7 @@ public enum Cities {
     KOCAELİ(41, "Kocaeli", "41000"),
     KONYA(42, "Konya", "42000"),
     KÜTAHYA(43, "Kütahya", "43"),
-    MALATYA(44, "Malatya", "44000"),
+    MALATYA(44, "Malatya", "44"),
     MANISA(45, "Manisa", "45000"),
     MARDİN(47, "Mardin", "47100"),
     MERSİN(33, "Mersin", "33000"),
