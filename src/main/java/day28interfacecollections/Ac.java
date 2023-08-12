@@ -1,6 +1,7 @@
 package day28interfacecollections;
 
-public interface Ac  {
+public interface
+Ac  {
 
     public abstract void cool();
     void run();
